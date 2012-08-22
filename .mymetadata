@@ -2,7 +2,7 @@
 <project-module
   type="WEB"
   name="spring_cxf"
-  id="myeclipse.1345662782780"
+  id="myeclipse.1345664309901"
   context-root="/spring_cxf"
   j2ee-spec="5.0"
   archive="spring_cxf.war">
