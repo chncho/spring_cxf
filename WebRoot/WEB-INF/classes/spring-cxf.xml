@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-beans-3.0.xsd
+		http://cxf.apache.org/jaxws 
+		http://cxf.apache.org/schemas/jaxws.xsd"
+		>
+
+	<description>使用Apache CXF的Web Service配置文件</description>
+
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	
+	<!-- 定义服务地址 -->
+	<jaxws:endpoint id="personService" address="/personService">
+		<jaxws:implementor ref="personServiceImpl">
+		</jaxws:implementor>
+	</jaxws:endpoint>
+	
+	<!-- 服务实现类 -->
+	<bean id="personServiceImpl" class="com.me.cxf.services.impl.PersonService">
+		<!-- 已经通过Autowired自动注入 -->
+	</bean>
+
+	
+</beans>
+	
+	
