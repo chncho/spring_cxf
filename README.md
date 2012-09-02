@@ -42,7 +42,8 @@ soapUI  3.5 [破解]
 异步方式调用
 一共有两种方式：
 
-Polling  --- 客户端不停循环检测<br>
+Polling  --- 客户端不停循环检测
+
 CallBack --- 服务器端自动回调
 
 com.me.sysclient
