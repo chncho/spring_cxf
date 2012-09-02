@@ -11,7 +11,7 @@ import com.me.cxf.services.IPersonService;
 enum  WSClient implements Serializable
 {
 	INSTANCE;  
-	private String url= "http://127.0.0.1:8080/spring_cxf/services/personService";;  
+	private String url= "http://127.0.0.1:8080/spring_cxf/services/personService";
 	
 	private IPersonService iPersonService;
 	
